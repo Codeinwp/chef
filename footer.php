@@ -16,7 +16,7 @@
 			<div class="container">
 				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'chef' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'chef' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %2$s by %1$s.', 'chef' ), 'JustFreeThemes', '<a href="http://justfreethemes.com/chef" rel="designer">Chef</a>' ); ?>
+				<?php printf( __( 'Theme: %2$s by %1$s.', 'chef' ), 'JustFreeThemes', '<a href="http://justfreethemes.com/chef" rel="nofollow">Chef</a>' ); ?>
 			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
