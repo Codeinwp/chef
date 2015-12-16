@@ -14,7 +14,7 @@
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<div class="container">
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'chef' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'chef' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'chef' ) ); ?>" rel="nofollow"><?php printf( __( 'Proudly powered by %s', 'chef' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
 				<?php printf( __( 'Theme: %2$s by %1$s.', 'chef' ), 'JustFreeThemes', '<a href="http://justfreethemes.com/chef" rel="nofollow">Chef</a>' ); ?>
 			</div>
