@@ -42,7 +42,7 @@ function chef_customize_register( $wp_customize ) {
                 $dropdown
             );
         }
-    }    
+    }
     //Recipe Hero cuisines dropdown
     class Chef_Cuisines extends WP_Customize_Control {
         public function render_content() {
@@ -63,7 +63,7 @@ function chef_customize_register( $wp_customize ) {
                 $dropdown
             );
         }
-    } 
+    }
 
     //___General___//
     $wp_customize->add_section(
@@ -121,8 +121,8 @@ function chef_customize_register( $wp_customize ) {
         'sidebar_widgets',
         array(
             'sanitize_callback' => 'chef_sanitize_checkbox',
-            'default' => 0,         
-        )       
+            'default' => 0,
+        )
     );
     $wp_customize->add_control(
         'sidebar_widgets',
@@ -130,9 +130,9 @@ function chef_customize_register( $wp_customize ) {
             'type' => 'checkbox',
             'label' => __('Hide the sidebar widgets on screen widths below 991px', 'chef'),
             'section' => 'chef_general',
-            'priority' => 11,           
+            'priority' => 11,
         )
-    );     
+    );
     //___Blog options___//
     $wp_customize->add_section(
         'blog_options',
@@ -146,8 +146,8 @@ function chef_customize_register( $wp_customize ) {
       'full_content',
       array(
         'sanitize_callback' => 'chef_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
         'full_content',
@@ -164,7 +164,7 @@ function chef_customize_register( $wp_customize ) {
         array(
             'sanitize_callback' => 'absint',
             'default'           => '55',
-        )       
+        )
     );
     $wp_customize->add_control( 'exc_lenght', array(
         'type'        => 'number',
@@ -192,14 +192,14 @@ function chef_customize_register( $wp_customize ) {
         'settings' => 'chef_options[titles]',
         'priority' => 13
         ) )
-    );    
+    );
     //Hide date
     $wp_customize->add_setting(
       'chef_date',
       array(
         'sanitize_callback' => 'chef_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'chef_date',
@@ -215,8 +215,8 @@ function chef_customize_register( $wp_customize ) {
       'chef_cats',
       array(
         'sanitize_callback' => 'chef_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'chef_cats',
@@ -246,8 +246,8 @@ function chef_customize_register( $wp_customize ) {
       'chef_single_date',
       array(
         'sanitize_callback' => 'chef_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'chef_single_date',
@@ -263,8 +263,8 @@ function chef_customize_register( $wp_customize ) {
       'chef_single_cats',
       array(
         'sanitize_callback' => 'chef_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'chef_single_cats',
@@ -280,8 +280,8 @@ function chef_customize_register( $wp_customize ) {
       'chef_single_tags',
       array(
         'sanitize_callback' => 'chef_sanitize_checkbox',
-        'default' => 0,     
-      )   
+        'default' => 0,
+      )
     );
     $wp_customize->add_control(
       'chef_single_tags',
@@ -337,7 +337,7 @@ function chef_customize_register( $wp_customize ) {
         'slider_display',
         array(
             'sanitize_callback' => 'chef_sanitize_checkbox',
-        )       
+        )
     );
     $wp_customize->add_control(
         'slider_display',
@@ -347,25 +347,25 @@ function chef_customize_register( $wp_customize ) {
             'section' => 'chef_slider',
         )
     );
-    
+
     //Courses
     $wp_customize->add_setting( 'slider_courses', array(
         'default'        => '',
         'sanitize_callback' => 'absint',
     ) );
-    
+
     $wp_customize->add_control( new Chef_Courses( $wp_customize, 'slider_courses', array(
         'label'   => __('Select which course to show in the slider', 'chef'),
         'section' => 'chef_slider',
         'settings'   => 'slider_courses',
     ) ) );
-  
+
     //Cuisines
     $wp_customize->add_setting( 'slider_cuisines', array(
         'default'        => '',
         'sanitize_callback' => 'absint',
     ) );
-    
+
     $wp_customize->add_control( new Chef_Cuisines( $wp_customize, 'slider_cuisines', array(
         'label'   => __('Select which cuisine to show in the slider', 'chef'),
         'section' => 'chef_slider',
@@ -380,7 +380,7 @@ function chef_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
         )
     );
-        
+
     $wp_customize->add_control(
         'slider_number',
         array(
@@ -396,7 +396,7 @@ function chef_customize_register( $wp_customize ) {
             'default' => '4000',
             'sanitize_callback' => 'absint',
         )
-    );     
+    );
     $wp_customize->add_control(
         'slideshowspeed',
         array(
@@ -443,7 +443,7 @@ function chef_customize_register( $wp_customize ) {
         'settings' => 'chef_options[titles]',
         'priority' => 10
         ) )
-    );     
+    );
     //Body fonts
     $wp_customize->add_setting(
         'body_font_name',
@@ -491,7 +491,7 @@ function chef_customize_register( $wp_customize ) {
         'settings' => 'chef_options[titles]',
         'priority' => 13
         ) )
-    );    
+    );
     //Headings fonts
     $wp_customize->add_setting(
         'headings_font_name',
@@ -539,7 +539,7 @@ function chef_customize_register( $wp_customize ) {
         'settings' => 'chef_options[titles]',
         'priority' => 16
         ) )
-    );     
+    );
     //H1 size
     $wp_customize->add_setting(
         'h1_size',
@@ -547,7 +547,7 @@ function chef_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '36',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h1_size', array(
         'type'        => 'number',
@@ -568,7 +568,7 @@ function chef_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '30',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h2_size', array(
         'type'        => 'number',
@@ -589,7 +589,7 @@ function chef_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '24',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h3_size', array(
         'type'        => 'number',
@@ -610,7 +610,7 @@ function chef_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '18',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h4_size', array(
         'type'        => 'number',
@@ -631,7 +631,7 @@ function chef_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '14',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h5_size', array(
         'type'        => 'number',
@@ -652,7 +652,7 @@ function chef_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '12',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'h6_size', array(
         'type'        => 'number',
@@ -673,7 +673,7 @@ function chef_customize_register( $wp_customize ) {
             'sanitize_callback' => 'absint',
             'default'           => '16',
             'transport'         => 'postMessage'
-        )       
+        )
     );
     $wp_customize->add_control( 'body_size', array(
         'type'        => 'number',
@@ -686,7 +686,7 @@ function chef_customize_register( $wp_customize ) {
             'step'  => 1,
             'style' => 'margin-bottom: 15px; padding: 10px;',
         ),
-    ) );    
+    ) );
     //___Colors___//
     //Primary color
     $wp_customize->add_setting(
@@ -729,7 +729,7 @@ function chef_customize_register( $wp_customize ) {
                 'priority' => 13
             )
         )
-    );    
+    );
     //Site title
     $wp_customize->add_setting(
         'site_title_color',
@@ -792,7 +792,7 @@ function chef_customize_register( $wp_customize ) {
                 'priority' => 16
             )
         )
-    );     
+    );
     //Body
     $wp_customize->add_setting(
         'body_text_color',
@@ -813,7 +813,7 @@ function chef_customize_register( $wp_customize ) {
                 'priority' => 17
             )
         )
-    );                   
+    );
 }
 add_action( 'customize_register', 'chef_customize_register' );
 
@@ -854,3 +854,14 @@ function chef_customize_preview_js() {
 	wp_enqueue_script( 'chef_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), true );
 }
 add_action( 'customize_preview_init', 'chef_customize_preview_js' );
+
+function chef_registers() {
+	wp_enqueue_script( 'chef_customizer_script', get_template_directory_uri() . '/js/chef_customizer.js', array("jquery"), '20120206', true  );
+
+	wp_localize_script( 'chef_customizer_script', 'chefCustomizerObject', array(
+		'github'				=> __('GitHub','chef'),
+		'review'				=> __('Leave a Review', 'chef'),
+		'documentation'	=> __('Documentation', 'chef')
+		) );
+}
+add_action( 'customize_controls_enqueue_scripts', 'chef_registers' );

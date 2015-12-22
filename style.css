@@ -1,8 +1,8 @@
 /*
 Theme Name: Chef
-Theme URI: http://flyfreemedia.com/theme/chef
-Author: Fly Free Media
-Author URI: http://flyfreemedia.com/blog
+Theme URI: http://justfreethemes.com/chef
+Author: JustFreeThemes
+Author URI: http://justfreethemes.com
 Description: Chef is a responsive magazine-style food theme that lets you share your awesome recipe with the world. Features include unlimited colors, fonts from Google, two types of front page layout, a configurable slider, social profile, mobile navigation and more.
 Version: 1.02
 License: GNU General Public License v2 or later
@@ -26,7 +26,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 #page {
-	display: none;	
+	display: none;
 }
 a,
 a:active,
@@ -209,7 +209,7 @@ Menus
 .main-navigation li:after {
 	position: absolute;
 	width: -webkit-calc(100% - 20px);
-	width: calc(100% - 20px);	
+	width: calc(100% - 20px);
 	font-family: Fontawesome;
 	content: '\f141';
 	bottom: 0;
@@ -480,7 +480,7 @@ Content
 .recipe-hero article.recipe .recipe-archive-tax .cuisine,
 .recipe-hero article.recipe .recipe-archive-tax .course {
 	display: block;
-	border: 0; 
+	border: 0;
 }
 .recipe-hero article.recipe .recipe-single-tax .cuisine,
 .recipe-hero article.recipe .recipe-archive-tax .cuisine {
@@ -569,7 +569,7 @@ Comments
 	background-color: #fff;
 	font-size: 12px;
 	-webkit-transition: all 0.4s;
-	transition: all 0.4s;	
+	transition: all 0.4s;
 }
 a.comment-reply-link {
 	text-decoration: none;
@@ -719,7 +719,7 @@ Social menu
 }
 .social-widget li a,
 .social-navigation li a {
-	text-decoration: none;	
+	text-decoration: none;
 }
 .social-navigation li a::before {
 	position: relative;
@@ -836,7 +836,7 @@ Mobile menu
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
-    border-radius: 4px;  
+    border-radius: 4px;
     display: block;
 }
 /* Button Text */
@@ -895,7 +895,7 @@ Mobile menu
     color:#222;
 }
 .slicknav_nav .slicknav_txtnode {
-     margin-left:15px;   
+     margin-left:15px;
 }
 /*--------------------------------------------------------------
 Structure
@@ -929,7 +929,7 @@ Structure
 }
 .site-content {
 	background-color: #fff;
-	padding: 55px 0;	
+	padding: 55px 0;
 	border: 1px solid #D0D0D0;
 }
 .content-area {
@@ -1124,7 +1124,7 @@ Responsive
 @media only screen and (max-width: 1199px) {
 	.content-area {
 		width: 600px;
-	}	
+	}
 	.fullwidth {
 		width: 100%;
 	}
@@ -1165,12 +1165,12 @@ Responsive
 	}
 	.recipe-item-b:nth-of-type(2n+1) {
 		clear: left;
-	}	
+	}
 }
 @media only screen and (max-width: 767px) {
 	.slide-info {
 		padding: 0 30px 30px;
-	}	
+	}
 }
 @media only screen and (max-width: 600px) {
 	.recipe-item {
@@ -1198,7 +1198,7 @@ Responsive
 	.slide-info .entry-title {
 		margin-bottom: 0;
 		font-size: 26px;
-	}	
+	}
 	.featured-area {
 		padding: 40px 0 30px;
 	}
@@ -1212,7 +1212,7 @@ Responsive
 	}
 	.serves br {
 		display: none;
-	}	
+	}
 	.recipe-data .the-time {
 		display: inline-block;
 	}
@@ -1221,5 +1221,5 @@ Responsive
 	}
 	.rh-grid .unit {
 		width: 100% !important;
-	}	
+	}
 }
