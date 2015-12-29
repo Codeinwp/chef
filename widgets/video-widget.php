@@ -5,14 +5,14 @@ class Chef_Video extends WP_Widget {
 // constructor
     function chef_video() {
 		$widget_ops = array('classname' => 'chef_video_widget', 'description' => __( 'Display an oEmbed video.', 'chef') );
-        parent::WP_Widget(false, $name = __('Chef: Video', 'chef'), $widget_ops);
+        parent::__construct(false, $name = __('Chef: Video', 'chef'), $widget_ops);
 		$this->alt_option_name = 'chef_video';
-		
+
 		add_action( 'save_post', array($this, 'flush_widget_cache') );
 		add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-		add_action( 'switch_theme', array($this, 'flush_widget_cache') );		
+		add_action( 'switch_theme', array($this, 'flush_widget_cache') );
     }
-	
+
 	// widget form creation
 	function form($instance) {
 
@@ -28,7 +28,7 @@ class Chef_Video extends WP_Widget {
 
 	<p><label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'Paste the URL of the video (only from a network that supports oEmbed, like Youtube, Vimeo etc.):', 'chef' ); ?></label>
 	<input class="widefat" id="<?php echo $this->get_field_id( 'url' ); ?>" name="<?php echo $this->get_field_name( 'url' ); ?>" type="text" value="<?php echo $url; ?>" size="3" /></p>
-	
+
 	<?php
 	}
 
@@ -41,15 +41,15 @@ class Chef_Video extends WP_Widget {
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
 		if ( isset($alloptions['chef_video']) )
-			delete_option('chef_video');		  
-		  
+			delete_option('chef_video');
+
 		return $instance;
 	}
-	
+
 	function flush_widget_cache() {
 		wp_cache_delete('chef_video', 'widget');
 	}
-	
+
 	// display widget
 	function widget($args, $instance) {
 		$cache = array();
@@ -80,9 +80,9 @@ class Chef_Video extends WP_Widget {
 		$url   = isset( $instance['url'] ) ? esc_url( $instance['url'] ) : '';
 
 		echo $before_widget;
-		
+
 		if ( $title ) echo $before_title . $title . $after_title;
-		
+
 		if( ($url) ) {
 			echo wp_oembed_get($url);
 		}
@@ -96,5 +96,5 @@ class Chef_Video extends WP_Widget {
 			ob_end_flush();
 		}
 	}
-	
-}	
+
+}
