@@ -5,14 +5,14 @@ class Chef_Recent_Posts extends WP_Widget {
 // constructor
     function chef_recent_posts() {
 		$widget_ops = array('classname' => 'chef_recent_posts_widget', 'description' => __( 'Display your site&#8217;s recent posts with thumbnails.', 'chef') );
-        parent::WP_Widget(false, $name = __('Chef: Recent Posts', 'chef'), $widget_ops);
+        parent::__construct(false, $name = __('Chef: Recent Posts', 'chef'), $widget_ops);
 		$this->alt_option_name = 'chef_recent_posts_widget';
-		
+
 		add_action( 'save_post', array($this, 'flush_widget_cache') );
 		add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-		add_action( 'switch_theme', array($this, 'flush_widget_cache') );		
+		add_action( 'switch_theme', array($this, 'flush_widget_cache') );
     }
-	
+
 	// widget form creation
 	function form($instance) {
 
@@ -32,7 +32,7 @@ class Chef_Recent_Posts extends WP_Widget {
 
 	<p><input class="checkbox" type="checkbox" <?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
 	<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?', 'chef' ); ?></label></p>
-	
+
 	<?php
 	}
 
@@ -46,15 +46,15 @@ class Chef_Recent_Posts extends WP_Widget {
 
 		$alloptions = wp_cache_get( 'alloptions', 'options' );
 		if ( isset($alloptions['chef_recent_posts']) )
-			delete_option('chef_recent_posts');		  
-		  
+			delete_option('chef_recent_posts');
+
 		return $instance;
 	}
-	
+
 	function flush_widget_cache() {
 		wp_cache_delete('chef_recent_posts', 'widget');
 	}
-	
+
 	// display widget
 	function widget($args, $instance) {
 		$cache = array();
@@ -146,5 +146,5 @@ class Chef_Recent_Posts extends WP_Widget {
 			ob_end_flush();
 		}
 	}
-	
+
 }
