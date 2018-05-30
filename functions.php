@@ -238,20 +238,8 @@ require_once get_template_directory() . '/class-tgm-plugin-activation.php';
 function chef_register_required_plugins() {
 		$plugins = array(
 			array(
-				'name'               => 'Recipe Hero',
-				'slug'               => 'recipe-hero',
-				'required'           => false,
-			),
-
-			array(
-				'name'      => 'WP Product Reviews',
-				'slug'      => 'wp-product-reviews',
-				'required'  => false,
-			),
-
-			array(
-				'name'      => 'Intergeo Maps - Google Maps Plugin',
-				'slug'      => 'intergeo-maps',
+				'name'      => 'Orbit Fox',
+				'slug'      => 'themeisle-companion',
 				'required'  => false
 			),
 
